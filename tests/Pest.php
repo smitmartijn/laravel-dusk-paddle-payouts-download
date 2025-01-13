@@ -1,5 +1,9 @@
 <?php
 
+// run the browser automation tests
+pest()->extend(Tests\DuskTestCase::class)
+    ->in('Browser');
+
 /*
 |--------------------------------------------------------------------------
 | Test Case
@@ -12,7 +16,7 @@
 */
 
 pest()->extend(Tests\TestCase::class)
- // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+    // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
     ->in('Feature');
 
 /*
